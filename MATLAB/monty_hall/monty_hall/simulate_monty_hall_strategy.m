@@ -1,0 +1,110 @@
+%Eric Sanacore
+%monty_hall
+
+function winProbability = simulate_monty_hall_strategy(strategy, numPlays)
+% strategy: A string that may be either 'stay' or 'switch'
+% numPlays: # of times to play the Monty Hall game using strategy
+% winProbability: # of times the car is won divided by numPlay
+
+wins = 0;
+
+reveal_car = randi(3);
+
+choice = randi(3);
+
+winningChance = rand(numPlays,1);
+
+for n = 1:numPlays
+    if winningChance(n) < (1/3) && strcmp(strategy,'stay')
+        wins = wins + 1;
+    elseif winningChance(n) >= (1/3) && strcmp(strategy,'switch')
+            wins = wins + 1;
+    end
+end
+
+winProbability = (wins / numPlays);
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% goat_wins = 0;
+% 
+% car_wins = 0;
+% 
+% switch_door = 0;
+% 
+% stay_door = 0;
+% 
+% % prompt = 'Will you switch, or stay?';
+% % strategy = input(prompt,'s');
+% 
+% for i = (1:numPlays);
+%     available_doors = (1:3);
+%     winningDoor = randInt(3);
+%     first_choice = input(strategy);
+%     available_doors(first_choice) = []
+%     second_choice = 0;
+%     
+%     if first_choice == second_choice
+%         stay_door = stay_door + 1
+%     else
+%         
+%         switch_door = switch_door + 1
+%         
+%         probability_stay = (stay_door / numPlays);
+%         probability_switch = (switch_door / numPlays);
+%     
+%     
+    
+    
+    
+    
+        
